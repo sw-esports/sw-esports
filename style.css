@@ -6,13 +6,14 @@
   --BGC:#FD263D;;
   --white: #ffffff;
 --text:#ffffff;
-
+}
 * {
   padding: 0;
   margin: 0;
   font-family: 'Gilroy', sans-serif;}
 html,
 body {
+  background-color: var(--bgcc);
   height: 100%;
   width: 100%;
 }
@@ -88,8 +89,7 @@ nav h1 {
 
 nav img {
   height: 40px;
-  display: none;
-}
+display: none;}
 
 .content {
   height: calc(100% - 50px);
@@ -156,12 +156,17 @@ nav img {
   width: 100%;
   opacity: 60%;
 }
+/* Media queries for smaller screens */
 
-@media (max-width:600px) {
+@media (max-width: 700px) {
   nav {
-    height: 100px;
+height: 100px;
+    width: 100%;
+    padding: 0 5vw;
 
-
+  }
+  nav h1{
+    font-size: 4vh;
   }
 
   .nav_items a {
@@ -169,195 +174,58 @@ nav img {
     display: none;
   }
 
-  nav img {:root {
-  --hover: #434242ca;
-  --hoverin: #FD263D;
-  --nav: bgcc;
-  --bgcc: #000000;
-  --BGC: #FD263D;
-  --white: #ffffff;
-  --text: #ffffff;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  font-family: 'Gilroy', sans-serif;
-}
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-}
-
-main {
-  min-height: 100vh;
-  width: 100%;
-  position: relative;
-  background-color: var(--bgcc);
-}
-
-nav {
-  background-color: var(--nav);
-  height: 50px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 5vw;
-  border-bottom: 0.7px solid black;
-}
-
-.nav_items {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  gap: 4vw;
-  margin-left: auto;
-}
-
-nav h1 {
-  color: var(--text);
-  font-size: 2vw;
-  font-weight: 700;
-}
-
-.nav_items a {
-  color: var(--text);
-  font-size: 1.2vw;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.nav_items > a:hover {
-  background-color: var(--hover);
-  padding: 0.8vw 1vw;
-  color: var(--hoverin);
-  border-radius: 5px;
-  border: none;
-}
-
-.nav_items button {
-  color: var(--text);
-  font-size: 1vw;
-  padding: 0.8vw 1.2vw;
-  background-color: var(--BGC);
-  border: none;
-  border-radius: 5px;
-  font-weight: 700;
-}
-
-.nav_items button a {
-  color: var(--white);
-}
-
-.nav_items button:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--white);
-}
-
-nav img {
-  height: 40px;
-  display: none;
-}
-
-.content {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.left {
-  width: 100%;
-  padding: 5vw;
-}
-
-.left h1 {
-  font-size: 4vw;
-  line-height: 1.2;
-}
-
-.left p {
-  font-size: 1.2vw;
-  font-weight: 600;
-  color: #7c7c7c;
-  width: 100%;
-  margin-top: 2vw;
-  margin-bottom: 4vw;
-}
-
-.left button {
-  font-size: 1.5vw;
-  padding: 1.3vw 2vw;
-  font-weight: 700;
-}
-
-.left > button > a:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--white);
-}
-
-.right {
-  width: 100%;
-}
-
-.right img {
-  width: 100%;
-  height: auto;
-  opacity: 60%;
-}
-  }}}
-  @media (max-width: 600px) {
-    nav {
-      height: 100px;
-    }
-  
-    .nav_items a {
-      font-size: 4vw;
-      display: none;
-    }
-  
-    nav img {
-      display: block;
-      height: 30px; /* Adjust the height of the logo as needed */
-    }
-  
-    .content {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .left,
-    .right {
-      width: 90%;
-      padding: 0;
-    }
-  
-    .left h1 {
-      font-size: 6vw;
-      line-height: 1;
-    }
-  
-    .left p {
-      font-size: 3vw;
-      margin-top: 3vw;
-      margin-bottom: 3vw;
-    }
-  
-    .left button {
-      font-size: 4vw;
-      padding: 2vw 4vw;
-    }
-  
-    .right {
-      width: 100%;
-      margin-top: 3vw;
-    }
-  
-    .right img {
-      width: 100%;
-      height: auto;
-    }
+  nav img {
+    height: 6vh;
   }
-  
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left,
+  .right {
+    width: 90%;
+    padding: 0;
+  }
+
+  .left h1 {
+    font-size: 9vw;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .left p {
+    font-size: 3.5vw;
+    margin-top: 3vw;
+    margin-bottom: 7vw;
+  }
+
+  .left button {
+    position: absolute;
+    left:35%;
+    font-size: 4vw;
+    padding: 2vw 4vw;
+    margin: 1vh;
+  }
+
+  .right {
+
+    width: 100%;
+    margin-top: 3vw;
+  }
+
+  .right img {
+    margin-top: 7vh;
+    position: relative;
+    left: 5%;
+    width: 100%;
+    height: auto;
+  }
+  nav img {
+    display: block;
+  }
+  nav button{
+    display: none;
+  }
+}
